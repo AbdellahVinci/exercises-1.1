@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ts-node",
+            "type": "node",
+            "request": "launch",
+            "args": [
+                "${relativeFile}"
+            ],
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "cwd": "${workspaceRoot}",
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": "Launch via NPM",
+            "request": "launch",
+            "runtimeArgs": [
+                "run-script",
+                "debug"
+            ],
+            "runtimeExecutable": "npm",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node",  // Changez "pwa-node" à "node"
+            "cwd": "${fileDirname}"
+        }
+    ]
+}

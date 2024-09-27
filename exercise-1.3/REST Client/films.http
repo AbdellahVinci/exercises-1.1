@@ -1,0 +1,24 @@
+### Read all movies
+GET http://localhost:3000/films
+
+### Read all movies with File variable
+@baseUrl = http://localhost:3000
+GET {{baseUrl}}/films
+
+### Read a single movie
+GET {{baseUrl}}/films/3
+
+### Create a movie
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+ {
+      
+      "title": "the expendables",
+      "director" : "Sylvester Stallone",
+      "duration" : 103,
+      "budget":60000,
+      "description":"Expendables ou Les Sacrifiés au Québec (The Expendables) est une série de films d'action américains débutée avec Expendables : Unité spéciale en 2010. À ce jour la saga est composée de quatre films.",
+      "imageUrl":"https://i.pinimg.com/564x/7a/7f/9c/7a7f9cc424796771569ea6ef091a9dbc.jpg"
+    }
+
