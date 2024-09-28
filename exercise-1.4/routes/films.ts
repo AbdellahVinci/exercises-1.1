@@ -61,9 +61,11 @@ router.get("/", (req, res) => {
   if (!isNaN(durationMIN) && durationMIN >= 0) {
     filteredFilms = filteredFilms.filter(film => film.duration >= durationMIN);
   }
+  // increasing sort
   if(sort==="asc"){
     filteredFilms.sort((a, b) => a.duration - b.duration); 
-   
+    
+   // decreasing sort
   }else if (sort ==="DESC"){
     filteredFilms.sort((a,b)=> b.title.localeCompare(a.title));
   }
@@ -71,21 +73,6 @@ router.get("/", (req, res) => {
   // Return filtred films or empty table if there is no valide carracter
   return res.json(filteredFilms);
 });
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
 
 
 
