@@ -1,0 +1,120 @@
+### Read all movies
+GET http://localhost:3000/films
+### Read one movie
+GET http://localhost:3000/films?title=Papillon
+
+
+### Search movies by duration
+http://localhost:3000/films?duration-min=120
+
+### increasing sorting 
+GET http://localhost:3000/films?sort=asc
+
+### increasing sorting 
+GET http://localhost:3000/films?sort=title
+
+
+
+### Read all movies with File variable
+@baseUrl = http://localhost:3000
+GET {{baseUrl}}/films
+
+### Read a single movie
+GET {{baseUrl}}/films/
+
+### Create a movie
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+ {
+      
+      "title": "the expendables",
+      "director" : "Sylvester Stallone",
+      "duration" : 103,
+      "budget":60000,
+      "description":"Expendables ou Les Sacrifiés au Québec (The Expendables) est une série de films d'action américains débutée avec Expendables : Unité spéciale en 2010. À ce jour la saga est composée de quatre films.",
+      "imageUrl":"https://i.pinimg.com/564x/7a/7f/9c/7a7f9cc424796771569ea6ef091a9dbc.jpg"
+    }
+
+### Delete a movie
+DELETE {{baseUrl}}/films/2
+
+### Update the movie identified by 5
+PATCH {{baseUrl}}/films/3
+Content-Type: application/json
+
+{
+    "title":"The godfather"
+}
+
+### Update or create the film identified by 5
+PUT {{baseUrl}}/films/
+Content-Type: application/json
+
+{
+    
+    "title": "The platform",
+    "director": "Ibra julian",
+    "duration": 120,
+    "budget": 100000,
+    "description": "Un film sur ......",
+    "imageUrl": "http://ee.com/image.jpg"
+}
+### Create new film with ID == 666
+PUT {{baseUrl}}/films/666
+Content-Type: application/json
+
+{
+    "title":"Attack of the beast",
+    "director": "The beast",
+    "duration": 666,
+    "budget": 666,
+    "description": "Un film sur ......",
+    "imageUrl":"https://666"
+}
+
+### Update film with ID == 2
+PATCH {{baseUrl}}/films/2
+Content-Type: application/json
+
+{
+    "title":"Star Wars: Episode II – Attack of the Clones",
+    "budget": 115
+}
+
+### Try to update film with ID == 2 with empty param
+PATCH {{baseUrl}}/films/2
+Content-Type: application/json
+
+{
+    "title":""
+}
+
+### Challenge ex1.6 : Try to update film with ID == 2 with unexpected param (id)
+
+PATCH {{baseUrl}}/films/2
+Content-Type: application/json
+
+{
+    "id": 22
+}
+### Create or update the film identified by 3
+PUT {{baseUrl}}/films/2
+Content-Type: application/json
+
+{
+    "title": "The Rabat",
+    "director": "Ibra julian",
+    "duration": 120,
+    "budget": 100000,
+    "description": "Un film sur ......",
+    "imageUrl": "http://ee.com/image.jpg"
+}
+
+
+
+
+
+
+
+
