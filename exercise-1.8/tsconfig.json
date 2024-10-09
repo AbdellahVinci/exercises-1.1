@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "outDir": "./build/",
+    "rootDir": ".", 
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  },
+  "include": ["bin/**/*", "routes/**/*", "app.ts", "type.ts"],  
+  "exclude": ["node_modules"]
+}
