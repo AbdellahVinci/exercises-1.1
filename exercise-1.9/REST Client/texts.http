@@ -1,0 +1,13 @@
+@baseUrl = http://localhost:3000
+
+### Read all texts
+GET {{baseUrl}}/texts
+
+### Read text with ID == 1
+GET {{baseUrl}}/texts/2
+
+### Delete the text with ID == 
+DELETE {{baseUrl}}/texts/2
+
+### Read all textes with levels
+GET {{baseUrl}}/texts/?level=hard
