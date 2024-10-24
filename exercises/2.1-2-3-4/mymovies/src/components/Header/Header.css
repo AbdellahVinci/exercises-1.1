@@ -1,0 +1,59 @@
+/* Style pour la section Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333; /* Même couleur de fond que le footer */
+    color: #fff;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #61dafb; /* Ajout d'une bordure similaire à celle du footer */
+  }
+  
+  /* Style de la navigation dans le header */
+  header nav {
+    display: flex;
+    gap: 2rem; /* Espacement entre les liens de navigation */
+    background-color: #333; /* Même couleur de fond que le footer */
+  }
+  
+  header nav a {
+    color: #ffffff; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprimer la ligne de soulignement */
+    font-size: 1rem; /* Taille de la police des liens */
+    transition: color 200ms; /* Transition douce pour le changement de couleur */
+  }
+  
+  header nav a:hover {
+    color: #61dafb; /* Changement de couleur au survol */
+  }
+  
+  /* Style du logo dans le header */
+  .header-logo {
+    width: 80px; 
+    height: auto; 
+    object-fit: contain;
+  }
+  
+  /* Style spécifique pour petits écrans */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    header nav {
+      margin-top: 1rem;
+      gap: 1.5rem; /* Ajustement de l'espacement pour les petits écrans */
+    }
+  }
+  
+
+.header-logo {
+  width: 50px; 
+  height: 50px; 
+  object-fit: contain; 
+}
+
+  
+ 
