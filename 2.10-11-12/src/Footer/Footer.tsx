@@ -9,7 +9,7 @@ const Footer: React.FC<FooterProps> = ({ logoUrl, children }) => {
   return (
     <footer>
       <img src={logoUrl} alt="" />
-      {children} {/* Affiche les enfants passés à Foooooter */}
+      {children} {/* Affiche les enfants passés à Fooooooter */}
     </footer>
   );
 };
