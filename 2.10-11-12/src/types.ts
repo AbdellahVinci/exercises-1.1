@@ -1,10 +1,10 @@
 
 export interface Movie {
-    title: string;
-    director: string;
-    duration: number;
-    image?: string;
-    description?: string;
-    budget?: number;
-  }
-  
+  id: string;
+  title: string;
+  director: string;
+  duration: number;
+  image: string;
+  description: string;
+  budget?: number;
+}

@@ -1,6 +1,6 @@
-
 import { useState } from "react";
 import { Movie } from "../types";
+import { v4 as uuidv4 } from "uuid"; // Assurez-vous d'installer uuid
 
 interface MovieFormProps {
   onAddMovie: (movie: Movie) => void;
@@ -8,23 +8,35 @@ interface MovieFormProps {
 
 const MovieForm = ({ onAddMovie }: MovieFormProps) => {
   const [newMovie, setNewMovie] = useState<Movie>({
+    id: "",
     title: "",
     director: "",
     duration: 0,
     image: "",
     description: "",
-    budget: undefined
+    budget: undefined,
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setNewMovie({ ...newMovie, [name]: name === "duration" || name === "budget" ? Number(value) : value });
+    setNewMovie({
+      ...newMovie,
+      [name]: name === "duration" || name === "budget" ? Number(value) : value,
+    });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onAddMovie(newMovie);
-    setNewMovie({ title: "", director: "", duration: 0, image: "", description: "", budget: undefined });
+    onAddMovie({ ...newMovie, id: uuidv4() }); // Ajout d'un ID unique
+    setNewMovie({
+      id: "",
+      title: "",
+      director: "",
+      duration: 0,
+      image: "",
+      description: "",
+      budget: undefined,
+    });
   };
 
   return (

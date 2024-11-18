@@ -1,16 +1,29 @@
+import { Movie } from "../types";
+import { Link } from "react-router-dom";
+import './HomePage.css'; 
 
-import Footer from '../Footer/Footer';  
+import Footer from "../Footer/Footer";
 
-const HomePage = () => {
+interface HomePageProps {
+  movies: Movie[];
+}
+
+const HomePage = ({ movies }: HomePageProps) => {
   return (
-    <div>
-      <h1>Bienvenue sur iMovies</h1>
-      <p>Explorez les films des cinémas UGC et votre collection de films préférés.</p>
+    <div className="homepage">
+      <h1>My Favorite Movies</h1>
+      <ul>
+        {movies.map((movie) => (
+          <li key={movie.id}>
+            <Link to={`/movie/${movie.id}`}>{movie.title}</Link>
 
-      {/* Footer ajouté à la page d'accueil */}
-      <Footer logoUrl="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" children={undefined} />
-      <p>© 2024 Mon Application</p>
+          </li>
+        ))}
+      </ul>
+      <Footer logoUrl="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg">
+        <p>© 2024 Mon Application</p>
         <p>Contactez-nous pour plus d'informations</p>
+      </Footer>
     </div>
   );
 };
