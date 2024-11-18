@@ -1,0 +1,41 @@
+/* Style pour la Navbar */
+nav {
+    background-color: #333; /* Couleur de fond sombre pour la navbar */
+    padding: 10px 20px; /* Espacement interne */
+  }
+  
+  ul {
+    list-style-type: none; /* Retire les puces des éléments de la liste */
+    padding: 0; /* Retire le padding par défaut */
+    margin: 0; /* Retire la marge par défaut */
+    display: flex; /* Affiche les éléments en ligne */
+    justify-content: flex-start; /* Aligne les éléments à gauche */
+  }
+  
+  li {
+    margin-right: 20px; /* Espacement entre les éléments de la liste */
+  }
+  
+  li:last-child {
+    margin-right: 0; /* Pas d'espacement après le dernier élément */
+  }
+  
+  a {
+    color: white; /* Couleur des liens */
+    text-decoration: none; /* Retire le soulignement des liens */
+    font-size: 16px; /* Taille des caractères */
+    padding: 8px 15px; /* Espacement autour du texte */
+    transition: background-color 0.3s ease; /* Transition pour un survol fluide */
+  }
+  
+  a:hover {
+    background-color: #555; /* Couleur de fond au survol */
+    border-radius: 4px; /* Coins arrondis */
+  }
+  
+  /* Optionnel : Ajoutez un effet quand un lien est actif */
+  a.active {
+    font-weight: bold; /* Met en gras le lien actif */
+    border-bottom: 2px solid white; /* Souligné sous le lien actif */
+  }
+  
