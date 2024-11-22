@@ -1,0 +1,36 @@
+/* Style de base pour HomePage */
+.homepage {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Fond clair pour la page */
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333; 
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    
+    
+  }
+  
+  li {
+    margin: 10px 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size:  16px;
+  }
+  
+  a:hover {
+    color: black;
+    font-size:  16px;
+  }
+  
