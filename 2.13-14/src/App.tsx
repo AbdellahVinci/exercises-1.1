@@ -9,7 +9,8 @@ interface Joke{
 const App = ()=>{
   const[joke,setJoke]=useState<Joke | undefined>(undefined);
 
-  useEffect(() => {
+  const fetchJoke = () => {
+    
     fetch("https://v2.jokeapi.dev/joke/Any?type=single")
       .then((response) => {
         return response.json();
@@ -19,7 +20,19 @@ const App = ()=>{
           joke: data.joke ?? "No joke found",
           category: data.category ?? "Unknown",
         });
-      });
+      })
+      .catch((error) => console.error("Error fetching joke:", error));
+  };
+
+  useEffect(() => {
+   
+    fetchJoke();
+
+    
+    const interval = setInterval(fetchJoke, 10000);
+
+  
+    return () => clearInterval(interval);
   }, []);
 
   if (!joke) {
