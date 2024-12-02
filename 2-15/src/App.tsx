@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { Movie, NewMovie } from "./types";
-import Footer from "./Footer/Footer";
+
 import Navbar from "./components/Navbar";
 import HomePage from "./Pages/HomePage";
 import CinemaPage from "./Pages/CinemaPage";
@@ -54,10 +54,7 @@ const App = () => {
         <Route path="/add-movie" element={<AddMoviePage onAddMovie={handleAddMovie} />} />
         <Route path="/movie/:id" element={<MoviePage movies={movies} />} />
       </Routes>
-      <Footer logoUrl="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg">
-        <p>© 2024 Mon Application</p>
-        <p>Contactez-nous pour plus d'informations</p>
-      </Footer>
+     
     </div>
   );
 };

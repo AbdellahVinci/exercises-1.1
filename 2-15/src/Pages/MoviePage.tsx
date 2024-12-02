@@ -27,7 +27,7 @@ const MoviePage = ({ movies }: MoviePageProps) => {
       <h1>{movie.title}</h1>
       <p>Director: {movie.director}</p>
       <p>Duration: {movie.duration} minutes</p>
-      {movie.image && <img src={movie.image} alt={movie.title} />}
+      {movie.imageUrl && <img src={movie.imageUrl} alt={movie.title} />}
       {movie.description && <p>{movie.description}</p>}
       {movie.budget && <p>Budget: ${movie.budget} million</p>}
     </div>
